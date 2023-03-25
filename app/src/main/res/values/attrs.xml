@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="baseBackground" format="color" />
+    <attr name="baseTextColor" format="color" />
+    <attr name="baseEditTextBackground" format="color" />
+</resources>

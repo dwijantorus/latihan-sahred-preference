@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Latihan Shared Preference</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="dont_have_an_account">Don\'t have an account?</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="error_password_dont_match">Password and confirmation password do not match</string>
+    <string name="error_minimal_password">Password must be at least 8 characters</string>
+    <string name="error_valid_email">Please enter a valid email address</string>
+    <string name="error_valid_username">Please enter a valid username</string>
+    <string name="error_field_required">All fields is required and cannot be empty</string>
+    <string name="logout">Logout</string>
+</resources>
