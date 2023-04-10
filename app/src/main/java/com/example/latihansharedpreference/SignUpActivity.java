@@ -13,6 +13,7 @@ import com.example.latihansharedpreference.databinding.ActivitySignUpBinding;
 
 import java.util.regex.Pattern;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -101,19 +102,15 @@ public class SignUpActivity extends AppCompatActivity {
 
         /*Create handle for the RetrofitInstance interface*/
         ApiService service = ApiClient.getRetrofitInstance().create(ApiService.class);
-        Call<ResponseApi> call = service.registerUser(username,fullname,email,password);
-        call.enqueue(new Callback<ResponseApi>() {
+        Call<ResponseBody> call = service.registerUser(username,fullname,email,password);
+        call.enqueue(new Callback<ResponseBody>() {
             @Override
-            public void onResponse(Call<ResponseApi> call, Response<ResponseApi> response) {
+            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 progressDialog.dismiss();
-                boolean status = response.body().isStatus();
-                toastMessage(response.body().getMessage());
-                if(status)
-                    goToLoginActivity();
             }
 
             @Override
-            public void onFailure(Call<ResponseApi> call, Throwable t) {
+            public void onFailure(Call<ResponseBody> call, Throwable t) {
                 progressDialog.dismiss();
                 toastMessage("Something went wrong...Please try later!");
             }
